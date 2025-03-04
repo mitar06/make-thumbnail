@@ -21,13 +21,17 @@ export default apiInitializer("0.11.1", (api) => {
           shortcut: "M",
           title: "Make Thumbnail",
           perform: (e) => { 
-            console.log(e); 
+            console.log(e.getText()); 
             let currentlySelected = e.selected.value;
             let thumbnailMarkdownIntegrated =  currentlySelected.replace(']', "|thumbnail]");
+            
+          
 
             e.replaceText(currentlySelected, thumbnailMarkdownIntegrated);
 
-            return  e.applySurround("[wrap=hidden]", "[/wrap]", thumbnailMarkdownIntegrated);  },
+            console.log(e);
+            
+            return  e.applySurround("[wrap=hidden]", "[/wrap]", "make_thumbnail_button_text");  },
         },
     ];
   
