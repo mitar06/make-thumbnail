@@ -1,0 +1,5 @@
+make_thumbnail_button:
+  default: "Make Thumbnail"
+  description: 
+    en: Click to make this image a thumbnail and hide it
+    
