@@ -18,7 +18,7 @@ export default apiInitializer("0.11.1", (api) => {
           id: "make_thumbnail_button",
           group: "fontStyles",
           icon: "image",
-          shortcut: "T",
+          shortcut: "M",
           title: "Make Thumbnail",
           perform: (e) => { console.log(e); return  e.applySurround("[wrap=hidden]", "[/wrap]", "make_thumbnail_button_text");  },
         },
