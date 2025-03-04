@@ -20,7 +20,7 @@ export default apiInitializer("0.11.1", (api) => {
           icon: "image",
           shortcut: "M",
           title: "Make Thumbnail",
-          perform: (e) => { console.log(e); return  e.applySurround("[wrap=hidden]", "|thumbnail[/wrap]", "make_thumbnail_button_text");  },
+          perform: (e) => { console.log(e); e.replaceText(']', '|thumbnail]'); return  e.applySurround("[wrap=hidden]", "[/wrap]", "make_thumbnail_button_text");  },
         },
     ];
   
