@@ -26,8 +26,8 @@ export default apiInitializer("0.11.1", (api) => {
             let thumbnailMarkdownIntegrated =  currentlySelected.replace(']', "|thumbnail]");
 
             e.replaceText(currentlySelected, thumbnailMarkdownIntegrated);
-            
-            return  e.applySurround("[wrap=hidden]", "[/wrap]", "make_thumbnail_button_text");  },
+
+            return  e.applySurround("[wrap=hidden]", "[/wrap]", thumbnailMarkdownIntegrated);  },
         },
     ];
   
