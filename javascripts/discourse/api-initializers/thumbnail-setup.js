@@ -28,8 +28,8 @@ export default apiInitializer("0.11.1", (api) => {
           
 
             e.replaceText(currentlySelected, thumbnailMarkdownIntegrated);
-
-            console.log(e);
+            console.log("post transform");
+            console.log(e.getText());
             
             return  e.applySurround("[wrap=hidden]", "[/wrap]", "make_thumbnail_button_text");  },
         },
