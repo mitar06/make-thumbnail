@@ -23,15 +23,11 @@ export default apiInitializer("0.11.1", (api) => {
           perform: (e) => { 
             console.log(e.getText()); 
             let currentlySelected = e.selected.value;
-            let thumbnailMarkdownIntegrated =  currentlySelected.replace(']', "|thumbnail]");
+            let thumbnailMarkdownIntegrated = "[wrap=hidden]" + currentlySelected.replace(']', "|thumbnail]") + "[/wrap]";
             
-          
-
-            e.replaceText(currentlySelected, thumbnailMarkdownIntegrated);
-            console.log("post transform");
-            console.log(e.getText());
-            
-            return  e.applySurround("[wrap=hidden]", "[/wrap]", "make_thumbnail_button_text");  },
+        
+            return e.replaceText(currentlySelected, thumbnailMarkdownIntegrated);
+            },
         },
     ];
   
