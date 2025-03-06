@@ -24,7 +24,7 @@ export default apiInitializer("0.11.1", (api) => {
             console.log(e.getText()); 
             let currentlySelected = e.selected.value;
             let thumbnailMarkdownIntegrated
-            if (currentlySelected.startsWith("[wrap=hidden]") && currentlySelected.endsWith("[/wrap]") && currentlySelected.contains("|thumbnail")){
+            if (currentlySelected.startsWith("[wrap=hidden]") && currentlySelected.endsWith("[/wrap]") && currentlySelected.includes("|thumbnail")){
                  thumbnailMarkdownIntegrated = currentlySelected.replace("[wrap=hidden]", "")
                                                                 .replace("[/wrap]", "")
                                                                 .replace("|thumbnail", "");
